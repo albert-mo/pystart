@@ -9,4 +9,12 @@ def invest(amount, rate, time):
         print('year ', i, ': $', total_amount)
 
 
-invest(1000, 0.05, 10)
+def invest_reference(amount, rate, time):
+    print("principal amount:{}".format(amount))
+    for t in range(1, time + 1):
+        amount = amount * (1 + rate)
+        print("year{}: ${}".format(t, amount))
+
+
+# invest(1000, 0.05, 10)
+invest_reference(1000, 0.05, 10)

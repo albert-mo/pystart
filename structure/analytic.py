@@ -5,14 +5,14 @@ import time
 
 
 a = []
-t0 = time.clock()
+t0 = time.perf_counter()
 for i in range(1, 20000):
     a.append(i)
-print(time.clock() - t0, "seconds process time")
+print(time.perf_counter() - t0, "seconds process time")
 
-t0 = time.clock()
+t0 = time.perf_counter()
 b = [i for i in range(1, 20000)]
-print(time.clock() - t0, "seconds process time")
+print(time.perf_counter() - t0, "seconds process time")
 
 c = [i**2 for i in range(1, 10)]
 d = [j+1 for j in range(1, 10)]
